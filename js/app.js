@@ -25,6 +25,20 @@ var seattle = {
     }
     return cookieSum;
   },
+  render() {
+    var section = document.getElementById('sales_list');
+    var ul = document.createElement('ul');
+    ul.textContent = `${this.location}`;
+    section.appendChild(ul);
+    for (var i = 0; i <= storeHours.length -1; i++){
+      var li = document.createElement('li');
+      li.textContent = `${storeHours[i]}: ${this.estimatedCookiesHr()[i]} cookies`;
+      ul.appendChild(li);
+    }
+    li = document.createElement('li');
+    li.textContent = `Total: ${this.cookieSum()} cookies`;
+    ul.appendChild(li);
+  },
 };
 
 var tokyo = {
@@ -48,6 +62,20 @@ var tokyo = {
       cookieSum += this.estimatedCookiesHr()[i];
     }
     return cookieSum;
+  },
+  render() {
+    var section = document.getElementById('sales_list');
+    var ul = document.createElement('ul');
+  ul.textContent = `${this.location}`;
+  section.appendChild(ul);
+    for (var i = 0; i <= storeHours.length -1; i++){
+      var li = document.createElement('li');
+      li.textContent = `${storeHours[i]}: ${this.estimatedCookiesHr()[i]} cookies`;
+      ul.appendChild(li);
+    }
+  li = document.createElement('li');
+  li.textContent = `Total: ${this.cookieSum()} cookies`;
+  ul.appendChild(li);
   },
 };
 
@@ -73,6 +101,20 @@ var dubai = {
     }
     return cookieSum;
   },
+  render() {
+    var section = document.getElementById('sales_list');
+    var ul = document.createElement('ul');
+  ul.textContent = `${this.location}`;
+  section.appendChild(ul);
+    for (var i = 0; i <= storeHours.length -1; i++){
+      var li = document.createElement('li');
+      li.textContent = `${storeHours[i]}: ${this.estimatedCookiesHr()[i]} cookies`;
+      ul.appendChild(li);
+    }
+  li = document.createElement('li');
+  li.textContent = `Total: ${this.cookieSum()} cookies`;
+  ul.appendChild(li);
+  },
 };
 
 var paris = {
@@ -97,6 +139,20 @@ var paris = {
     }
     return cookieSum;
   },
+  render() {
+    var section = document.getElementById('sales_list');
+    var ul = document.createElement('ul');
+  ul.textContent = `${this.location}`;
+  section.appendChild(ul);
+    for (var i = 0; i <= storeHours.length -1; i++){
+      var li = document.createElement('li');
+      li.textContent = `${storeHours[i]}: ${this.estimatedCookiesHr()[i]} cookies`;
+      ul.appendChild(li);
+    }
+  li = document.createElement('li');
+  li.textContent = `Total: ${this.cookieSum()} cookies`;
+  ul.appendChild(li);
+  },
 };
 
 var lima = {
@@ -119,11 +175,28 @@ var lima = {
     for (var i = 0; i < storeHours.length; i++){
       cookieSum += this.estimatedCookiesHr()[i];
     }
-    return cookieSum;
+  return cookieSum;
+  },
+  render() {
+    var section = document.getElementById('sales_list');
+    var ul = document.createElement('ul');
+  ul.textContent = `${this.location}`;
+  section.appendChild(ul);
+    for (var i = 0; i <= storeHours.length -1; i++){
+      var li = document.createElement('li');
+      li.textContent = `${storeHours[i]}: ${this.estimatedCookiesHr()[i]} cookies`;
+      ul.appendChild(li);
+    }
+  li = document.createElement('li');
+  li.textContent = `Total: ${this.cookieSum()} cookies`;
+  ul.appendChild(li);
   },
 };
 
-
-//Display the values of each array as unordered lists in the browser
-
-//Display the lists on sales.html. 
+(function display() {
+  seattle.render();
+  tokyo.render();
+  dubai.render();
+  paris.render();
+  lima.render();
+})();

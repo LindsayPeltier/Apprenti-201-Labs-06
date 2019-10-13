@@ -1,3 +1,23 @@
-*{
-  background-color: burlywood;
+body{
+  background-color: rgb(219, 212, 203);
+}
+
+h1{
+  color: rgb(83, 46, 42);
+}
+
+header{
+  height: 90px;
+  border-bottom: darkgray solid 3px;
+  background-color: lightgray;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img{
+  margin-top: 20px;
 }
