@@ -36,7 +36,7 @@ var seattle = {
       ul.appendChild(li);
     }
     li = document.createElement('li');
-    li.textContent = `Total: ${this.cookieSum()} cookies`;
+    li.textContent = `Total: ${this.totalDailyCookies()} cookies`;
     ul.appendChild(li);
   },
 };
@@ -74,7 +74,7 @@ var tokyo = {
       ul.appendChild(li);
     }
   li = document.createElement('li');
-  li.textContent = `Total: ${this.cookieSum()} cookies`;
+  li.textContent = `Total: ${this.totalDailyCookies()} cookies`;
   ul.appendChild(li);
   },
 };
@@ -112,7 +112,7 @@ var dubai = {
       ul.appendChild(li);
     }
   li = document.createElement('li');
-  li.textContent = `Total: ${this.cookieSum()} cookies`;
+  li.textContent = `Total: ${this.totalDailyCookies()} cookies`;
   ul.appendChild(li);
   },
 };
@@ -150,7 +150,7 @@ var paris = {
       ul.appendChild(li);
     }
   li = document.createElement('li');
-  li.textContent = `Total: ${this.cookieSum()} cookies`;
+  li.textContent = `Total: ${this.totalDailyCookies()} cookies`;
   ul.appendChild(li);
   },
 };
@@ -188,7 +188,7 @@ var lima = {
       ul.appendChild(li);
     }
   li = document.createElement('li');
-  li.textContent = `Total: ${this.cookieSum()} cookies`;
+  li.textContent = `Total: ${this.totalDailyCookies()} cookies`;
   ul.appendChild(li);
   },
 };
